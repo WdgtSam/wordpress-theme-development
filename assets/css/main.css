@@ -9961,6 +9961,16 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
 }
+@media (min-width: 576px) {
+  body.admin-bar .fixed-top {
+    top: 46px;
+  }
+}
+@media (min-width: 768px) {
+  body.admin-bar .fixed-top {
+    top: 32px;
+  }
+}
 
 main {
   margin-top: 56px;

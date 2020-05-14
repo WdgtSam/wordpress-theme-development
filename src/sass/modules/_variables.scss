@@ -59,6 +59,10 @@ $dark:          $gray-800;
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
 
+$grid-columns:                12;
+$grid-gutter-width:           30px;
+$grid-row-columns:            6;
+
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
