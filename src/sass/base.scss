@@ -1,9 +1,29 @@
+* {
+    outline: none!important;
+}
 
+html {
+    position: relative;
+    min-height: 100%;
+}
 
 body {
     max-width: 100vw;
     overflow-x: hidden;
+    min-height: 100%;
     @extend %no-scrollbar;
+    @include media-breakpoint-up(md){
+        margin-bottom: 102px; // l'altezza del footer
+    }
+    
+    @include media-breakpoint-down(sm) {
+        &.admin-bar main {
+            margin-top: 0px;
+        }
+        #wpadminbar {
+            display: none;
+        }
+    }
 
     @include media-breakpoint-up(sm) {
         &.admin-bar .fixed-top {
@@ -51,7 +71,7 @@ main {
         top: 0px;
         left: 0px;
         // background-color: rgba($color: #000000, $alpha: 0.2);
-        background-image: url('../../assets/img/pattern-hero.png');
+        background-image: url('#{$images-path}/pattern-hero.png');
     }
     .page-hero-content {
         min-height: 336px;
@@ -76,7 +96,7 @@ main {
 * Tease
 */
 
-//tease category
+// tease category
 .tease-category {
     position: relative;
     height: 275px;

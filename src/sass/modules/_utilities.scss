@@ -42,3 +42,12 @@
         display: none!important;
     }
 }
+
+/**
+* Anti alias
+*/
+%anti-alias {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}

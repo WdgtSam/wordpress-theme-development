@@ -9928,6 +9928,15 @@ body::-webkit-scrollbar {
   display: none !important;
 }
 
+/**
+* Anti alias
+*/
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 /*******************************************
  *
  * Typography Classes
@@ -9940,10 +9949,37 @@ html {
 /****************
   Fonts Import
 *****************/
+h1, .h1 {
+  font-size: 2rem;
+}
 @media (min-width: 768px) {
   h1, .h1 {
     font-size: 3rem;
   }
+}
+
+h2, .h2 {
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  h2, .h2 {
+    font-size: 2rem;
+  }
+}
+
+/**
+* Buttons
+*/
+.btn-primary {
+  opacity: 0.8;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  min-width: 130px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
 }
 
 /** 
@@ -9957,9 +9993,53 @@ img.lazy {
   opacity: 0.2;
 }
 
+.navbar-light .navbar-toggler {
+  border: 0px;
+}
+
+.page-footer {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #830000;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .page-footer {
+    position: absolute;
+    bottom: 0;
+  }
+}
+.page-footer a {
+  color: #fff;
+}
+
+* {
+  outline: none !important;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  min-height: 100%;
+}
+@media (min-width: 768px) {
+  body {
+    margin-bottom: 102px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.admin-bar main {
+    margin-top: 0px;
+  }
+  body #wpadminbar {
+    display: none;
+  }
 }
 @media (min-width: 576px) {
   body.admin-bar .fixed-top {
@@ -10007,7 +10087,7 @@ main {
   position: absolute;
   top: 0px;
   left: 0px;
-  background-image: url("../../assets/img/pattern-hero.png");
+  background-image: url("../../assets/images/pattern-hero.png");
 }
 .page-hero .page-hero-content {
   min-height: 336px;
