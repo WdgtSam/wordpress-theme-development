@@ -14,7 +14,6 @@
  * @since 1.0.0
  */
 
-
 get_header();
 ?>
 
@@ -35,8 +34,6 @@ get_header();
             </div>
         </div>
     </div>
-	
-
 </main><!-- #site-content -->
 
 <?php get_footer(); ?>

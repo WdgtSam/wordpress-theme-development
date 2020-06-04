@@ -26,7 +26,7 @@ if ( $next_post || $prev_post ) {
 
 		<hr class="styled-separator is-style-wide" aria-hidden="true" />
 
-		<div class="pagination-single-inner">
+		<div class="pagination-single-inner d-flex justify-content-between">
 
 			<?php
 			if ( $prev_post ) {
@@ -44,8 +44,7 @@ if ( $next_post || $prev_post ) {
 				?>
 
 				<a class="next-post" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">
-					<span class="arrow" aria-hidden="true">&rarr;</span>
-						<span class="title"><span class="title-inner"><?php echo wp_kses_post( get_the_title( $next_post->ID ) ); ?></span></span>
+					<span class="title"><span class="title-inner"><?php echo wp_kses_post( get_the_title( $next_post->ID ) ); ?></span><span class="arrow" aria-hidden="true">&rarr;</span></span>
 				</a>
 				<?php
 			}

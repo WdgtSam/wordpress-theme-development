@@ -37,7 +37,7 @@
                             <p><?php echo $page_hero['content']?></p>
                         <?php endif; ?>
 
-                        <?php if($page_hero['call_to_action']):?>
+                        <?php if( isset($page_hero['call_to_action']) && $page_hero['call_to_action']):?>
                             <a href="<?php echo $page_hero['call_to_action']['url'] ?>" target="<?php echo $page_hero['call_to_action']['target'] ?>" class="btn btn-primary btn-lg text-uppercase rounded-0"><?php echo $page_hero['call_to_action']['title'] ?></a>
                         <?php endif; ?>
 

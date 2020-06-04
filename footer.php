@@ -17,9 +17,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col col-md-6 col-lg-4">
-                        Unlisted s.r.l. - Via Roma, 1 25100 Brescia<br>
-                        Cap. soc. €20.000,00 i.v. Reg. Impr. BS 123456<br>
-                        CF e P IVA 123456789123
+                        <?php the_field('footer_content', 'options'); ?>
                     </div>
                     <div class="col col-md-6 col-lg-8">
                         <div class="d-flex w-100 h-100 justify-content-end align-items-end flex-row">

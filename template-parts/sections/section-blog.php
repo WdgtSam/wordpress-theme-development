@@ -4,7 +4,7 @@
     $args = array( 
         'posts_per_page' => 4,
         'post_type' => 'post',
-        'publish' => true
+        'post_status' => 'publish'
     ); 
     
     // Variable to call WP_Query. 
@@ -20,7 +20,6 @@
                     <div class="col col-md-6 col-lg-4">
                         <?php get_template_part( 'template-parts/teases/tease', get_post_type() ); ?>
                     </div>
-
                 <?php
                 // End the Loop 
                 endwhile; 

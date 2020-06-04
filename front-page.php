@@ -19,6 +19,9 @@
     <!-- section who we are -->
     <?php get_template_part('template-parts/sections/section-who-we-are') ?>
 
+    <!-- section categories -->
+    <?php get_template_part('template-parts/sections/section-categories') ?>
+
     <!-- section blog -->
     <?php get_template_part( 'template-parts/sections/section', 'blog' ); ?>
     
