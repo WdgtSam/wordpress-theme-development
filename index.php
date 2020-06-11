@@ -17,6 +17,6 @@
 
 <?php get_header(); ?>
 
-index
+index.php
 
 <?php get_footer(); ?>

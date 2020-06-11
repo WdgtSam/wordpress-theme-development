@@ -9,26 +9,20 @@
  * @since 1.0.0
  */
 
-/**
- * Translators:
- * This text contains HTML to allow the text to be shorter on small screens.
- * The text inside the span with the class nav-short will be hidden on small screens.
- */
-
 $prev_text = sprintf(
 	'%s <span class="nav-prev-text">%s</span>',
 	'<span aria-hidden="true">&larr;</span>',
 	__( 'Newer <span class="nav-short">Posts</span>', 'sam-theme' )
 );
 $next_text = sprintf(
-	'<span class="nav-next-text">%s</span> %s',
+	'%s <span class="nav-next-text">%s</span>',
 	__( 'Older <span class="nav-short">Posts</span>', 'sam-theme' ),
 	'<span aria-hidden="true">&rarr;</span>'
 );
 
 $posts_pagination = get_the_posts_pagination(
 	array(
-		'mid_size'  => 1,
+		'mid_size'  => 3,
 		'prev_text' => $prev_text,
         'next_text' => $next_text,
         'screen_reader_text' => ' '
@@ -45,9 +39,9 @@ if ( strpos( $posts_pagination, 'next page-numbers' ) === false ) {
 	$posts_pagination = str_replace( '</div>', '<span class="next page-numbers placeholder" aria-hidden="true">' . $next_text . '</span></div>', $posts_pagination );
 }
 
-if ( $posts_pagination ) { ?>
+if ( $posts_pagination ) : ?>
 
-	<div class="pagination-wrapper section-inner">
+	<div class="pagination-wrapper section-inner d-flex align-items-center">
 
 		<hr class="styled-separator pagination-separator is-style-wide" aria-hidden="true" />
 
@@ -55,5 +49,5 @@ if ( $posts_pagination ) { ?>
 
 	</div><!-- .pagination-wrapper -->
 
-	<?php
-}
+<?php
+endif;

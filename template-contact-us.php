@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Contact Us 
+ * Template Name: Contact Us
  * 
  * https://developer.wordpress.org/themes/template-files-section/page-template-files/
  *

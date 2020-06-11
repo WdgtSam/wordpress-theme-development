@@ -89,3 +89,12 @@ add_action( 'wp_enqueue_scripts', 'samtheme_register_scripts' );
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();	
 }
+
+/**
+ * Add Acf Google Api
+ */
+function my_acf_google_map_api( $api ){
+    $api['key'] = 'AIzaSyAOXrTSR0MHp4Prb-vNX58O0boBzfuy8DQ';
+    return $api;
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');

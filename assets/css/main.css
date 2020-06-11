@@ -10107,6 +10107,13 @@ main {
   width: auto;
 }
 
+.pagination {
+  width: 100%;
+}
+.pagination .nav-links {
+  margin: 0 auto;
+}
+
 /**
 * Tease
 */

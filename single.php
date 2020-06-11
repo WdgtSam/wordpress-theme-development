@@ -17,10 +17,9 @@
 get_header();
 ?>
 
-<main id="site-content" role="main">
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-lg-8">
                 <?php
                     if ( have_posts() ) {
 
@@ -32,8 +31,10 @@ get_header();
                     }
                 ?>
             </div>
+            <div class="col-lg-4">
+                sidebar
+            </div>
         </div>
     </div>
-</main><!-- #site-content -->
 
 <?php get_footer(); ?>
