@@ -10118,6 +10118,13 @@ main {
   margin: 0 auto;
 }
 
+div.wpcf7-mail-sent-ok {
+  border: none !important;
+  color: #28a745 !important;
+  font-size: 12px;
+  padding: 0px;
+}
+
 /**
 * Tease
 */
