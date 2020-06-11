@@ -12,9 +12,6 @@ body {
     overflow-x: hidden;
     min-height: 100%;
     @extend %no-scrollbar;
-    @include media-breakpoint-up(md){
-        margin-bottom: 102px; // l'altezza del footer
-    }
     
     @include media-breakpoint-down(sm) {
         &.admin-bar main {

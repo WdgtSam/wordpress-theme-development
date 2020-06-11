@@ -9999,19 +9999,28 @@ img.lazy {
 
 .page-footer {
   width: 100%;
-  padding-top: 15px;
+  padding-top: 0px;
   padding-bottom: 15px;
   background-color: #830000;
   color: #fff;
 }
-@media (min-width: 768px) {
-  .page-footer {
-    position: absolute;
-    bottom: 0;
-  }
-}
 .page-footer a {
   color: #fff;
+}
+.page-footer .pre-footer {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.page-footer .social-icon {
+  height: 31px;
+  width: auto;
+}
+
+.footer-logo {
+  max-width: 116px;
+  height: auto;
+  padding-bottom: 1rem;
 }
 
 * {
@@ -10027,11 +10036,6 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   min-height: 100%;
-}
-@media (min-width: 768px) {
-  body {
-    margin-bottom: 102px;
-  }
 }
 @media (max-width: 767.98px) {
   body.admin-bar main {
