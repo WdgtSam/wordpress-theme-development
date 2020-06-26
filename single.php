@@ -32,7 +32,7 @@ get_header();
                 ?>
             </div>
             <div class="col-lg-4">
-                sidebar
+                <?php get_template_part( 'template-parts/main-sidebar' ); ?>
             </div>
         </div>
     </div>

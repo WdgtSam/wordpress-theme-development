@@ -17,9 +17,20 @@ if ( have_posts() ) {
         <div class="row">
             <div class="col">
                 <h1 class="h2 text-primary"><?php  the_title(); ?></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2">
                 <?php  the_content(); ?>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-7"><?php 
+$location = get_field('location');
+if( $location ): ?>
+    <div class="acf-map" data-zoom="16">
+        <div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
+    </div>
+<?php endif; ?></div>
+            <div class="col-lg-3">
                 <?php 
                     $contact_form_id = get_field('contact_form_id');
                     echo do_shortcode( '[contact-form-7 id=' . $contact_form_id . ']' ); 

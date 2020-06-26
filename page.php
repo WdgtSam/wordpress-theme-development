@@ -12,30 +12,32 @@
 
 <?php get_header(); ?>
 
-<?php
-// wordpress loop
-if ( have_posts() ) : 
-    while ( have_posts() ) : the_post(); 
-        // Display post content
-        //print("<h1>".print_r($post,true)."</h1>");
-    ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+            <?php
+            // wordpress loop
+            if ( have_posts() ) : 
+                while ( have_posts() ) : the_post(); 
+                ?>
 
-    <h1>
-        <?php the_title(); ?>
-    </h1>
-    
-    <div> 
-        <?php the_content(); ?>
+                <h1><?php the_title(); ?></h1>
+                
+                <div><?php the_content(); ?></div>
+
+                <?php
+                endwhile;
+            else :
+                _e( 'Sorry, no posts matched your criteria.', 'samtheme' );
+            endif;
+            ?>
+            </div>
+            <div class="col-lg-3">
+                <?php get_template_part( 'template-parts/main-sidebar' ); ?>
+            </div>
+        </div>
     </div>
-    <small>
-        <?php the_excerpt(); ?>
-    </small>
 
-    <?php
-    endwhile;
-else :
-    _e( 'Sorry, no posts matched your criteria.', 'samtheme' );
-endif;
-?>
+    
 
 <?php get_footer(); ?>
